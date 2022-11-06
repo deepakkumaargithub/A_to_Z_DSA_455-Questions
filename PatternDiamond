@@ -1,0 +1,94 @@
+
+Approach: 1
+class Solution {
+
+    void printDiamond(int n) {
+        
+      for ( int row=1; row<=n; row++){
+          for(int col =1; col<=n-row; col++){
+             System.out.print(" ");
+          }
+          for(int print =0; print<row; print++){
+                 System.out.print("* ");
+             }
+          System.out.println();  
+      }
+      
+      for( int row = 1; row<=n; row++){
+          for( int col=1; col<row; col++){
+              System.out.print(" ");
+          }
+          for ( int print = row; print<=n; print++){
+              System.out.print("* ");
+          }
+        System.out.println();  
+      }
+      
+        
+    }         
+                 
+             
+}
+
+
+Approach : 2  ( only if n is odd)...its need to be debug for even no.
+....................................................................
+class Solution {
+
+    void printDiamond(int n) {
+        int i=n;
+        int j=n;
+        int N=n;
+        if ( n%2 == 0){
+            N = n+1;
+        }
+        int i1=1;
+        int j1= 2*n-1;
+      for ( int row=1; row<=N; row++){
+          for(int col =1; col<= 2*N-1; col++){
+              if ( col>=i && col<=j){
+                  if (row%2 ==0 && col%2 == 0){
+                      System.out.print("*");
+                  }
+                  else if ( row%2 !=0 && col%2 != 0){
+                      System.out.print("*");
+                  }
+                  else{
+                      System.out.print(" ");
+                  }
+              }
+              else {
+                  System.out.print(" ");
+              }
+               
+          }
+           
+          i--;
+          j++;
+          System.out.println();
+      }
+       for ( int row=1; row<=N; row++){
+           for(int col =1; col<=2*N-1; col++){
+               if ( col>=i1 && col<=j1){
+                   if (row%2 ==0 && col%2 == 0){
+                       System.out.print("*");
+                   }
+                   else if ( row%2 !=0 && col%2 != 0){
+                       System.out.print("*");
+                   }
+                   else{
+                       System.out.print(" ");
+                   }
+               }
+               else {
+                   System.out.print(" ");
+               }
+               
+           }
+           
+           i1++;
+           j1--;
+           System.out.println();
+       }
+    }
+}
