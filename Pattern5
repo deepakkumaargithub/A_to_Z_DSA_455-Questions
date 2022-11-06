@@ -1,0 +1,23 @@
+Example 1:
+
+Input: 5
+
+Output:
+* * * * *
+* * * * 
+* * * 
+* *  
+* 
+
+
+
+class Solution {
+
+    void printTriangle(int n) {
+        for( int row =n; row>=1; row--){
+            for( int col=1; col<=row; col++){
+                System.out.print("* ");
+            }
+            System.out.println();        }
+    }
+}
