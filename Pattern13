@@ -1,0 +1,15 @@
+
+
+class Solution {
+
+    void printTriangle(int n) {
+        int print=1;
+        for( int row=1; row<=n; row++){
+            for( int col=1; col<=row; col++ ){
+                System.out.print(print+" ");
+                print++;
+            }
+            System.out.println();
+        }
+    }
+}
