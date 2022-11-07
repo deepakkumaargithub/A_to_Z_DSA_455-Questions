@@ -1,0 +1,15 @@
+
+class Solution {
+
+    void printTriangle(int n) {
+        for(int row=1; row<=n; row++){
+            int N = 65+n-1;
+            char ch = (char)N;
+            for( int col=1; col<=row; col++){
+                System.out.print(ch+" ");
+                ch--;
+            }
+            System.out.println();
+        }
+    }
+}
