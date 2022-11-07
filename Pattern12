@@ -1,0 +1,33 @@
+........not generate output properly.....later try  to debug
+class Solution {
+
+    void printTriangle(int n) {
+        int left = 1;
+        int right = 2*n; 
+        
+        for( int row=1; row<=n; row++){
+
+
+            for( int col=1; col<=2*n; col++){
+                
+                if ( col<=left || col>=right){
+                    
+                    if ( col>n){
+                     System.out.print(col+" ");
+                
+                    }
+                    else{
+                        System.out.print(col+" ");
+                    }
+                    
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            left++;
+            right--;
+            System.out.println();
+        }
+    }
+}
