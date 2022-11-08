@@ -1,0 +1,18 @@
+
+
+
+class Solution{
+    static int evenlyDivides(int N){
+        int count=0;
+        int number = N;
+        while( number!= 0){
+            int lastDigit =number%10;
+            
+            if (lastDigit >0 && N%lastDigit == 0 ){
+                count++;
+            }
+            number = number/10;
+        }
+        return count;
+    }
+}
