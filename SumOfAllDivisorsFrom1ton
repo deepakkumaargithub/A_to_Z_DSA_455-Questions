@@ -1,0 +1,35 @@
+
+O(n):-
+
+//User function Template for Java
+class Solution{
+    static long sumOfDivisors(int N){
+        // code here
+        long sum = 0;
+        for ( int i=1; i<=N; i++){
+            sum = sum + ((N/i)*i);
+        }
+        return sum;
+    }
+}
+
+
+.........................
+O(n*n)
+
+
+//User function Template for Java
+class Solution{
+    static long sumOfDivisors(int N){
+        // code here
+        long sum = N;
+        for ( int i=2; i<=N; i++){
+            for( int j=2; j<=i; j++){
+              if ( i%j == 0){
+                  sum = sum + j;
+              }  
+            }
+        }
+        return sum;
+    }
+}
