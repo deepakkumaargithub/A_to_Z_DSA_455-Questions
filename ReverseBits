@@ -1,0 +1,17 @@
+
+
+class Solution {
+    static Long reversedBits(Long X) {
+        long reverseBinarySum = 0l;
+        long x = X;
+        int i= 0;
+        while ( x != 0){
+            long binaryConversion  = x%2;
+            reverseBinarySum = reverseBinarySum + (long)(binaryConversion*(Math.pow(2,31-i)));
+            x = x/2;
+            i++;
+            
+        }
+        return reverseBinarySum;
+    }
+};
