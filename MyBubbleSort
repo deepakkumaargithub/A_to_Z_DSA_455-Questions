@@ -1,8 +1,8 @@
 package selfDSA;
 import java.util.Arrays;
 
-//- bubble sort is comparison based sorting
-//- compare adjacent elements
+//- bubble sort is comparison based sorting.
+//- compare adjacent elements.(stable)
 
 public class MyBubblesort {
     public static void main(String[] args){
