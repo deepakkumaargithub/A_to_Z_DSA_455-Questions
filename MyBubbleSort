@@ -1,0 +1,41 @@
+package selfDSA;
+import java.util.Arrays;
+
+//- bubble sort is comparison based sorting
+//- compare adjacent elements
+
+public class MyBubblesort {
+    public static void main(String[] args){
+        int[] arr = {-3,0,-2,1,2,9,2}; //  input
+        myBubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static void myBubbleSort( int[] arr){ // function for bubble sort
+        boolean flag;   // stop "i" whenever array is sorted.  
+
+        for( int i = 0; i<arr.length-1; i++){  // outer  loop  will length -1 times.
+            flag = false; 
+            for( int j = 1; j<arr.length-i; j++){ // inner loop  which sort 1 element at every pass from end.
+
+                if( arr[j]<arr[j-1]){ // check previous element is smaller than present or  not , if  not  than swap.
+                    //swapping
+                    int temp = arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = temp;
+                    flag = true;
+                }
+
+
+            }
+            if ( flag == false ){
+                break;
+            }
+            System.out.println("not sorted");
+        }
+    }
+}
+
+// time complexity
+//- best case  O(n),when array is already sorted.
+//- worst case O(n^2)
