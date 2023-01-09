@@ -1,0 +1,33 @@
+package selfDSA;
+import java.util.Arrays;
+// - selection sort is comaprison based sorting.
+// -  either sort by using min or max and put into  its correct position. (not stable)
+public class MySelectionSort {
+    public static void main( String[] args){
+        int[] arr ={3,-2,2,0,7,-3,6}; // input
+        mySelectionSort(arr);
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    static void mySelectionSort(int[] arr){ // function for selection sort
+        for( int i = 0; i<arr.length-1; i++){ //  outer loop will  run length-1 times.
+            int max =arr[0];
+            int maxindex = 0;
+            for(int j = 1; j<arr.length-i; j++){ // inner loop will find max element for every pass and put into its correct  position.
+                if( max<arr[j]){
+                    max = arr[j];
+                    maxindex=j;
+                }
+            }
+            //swapping
+            int temp  = arr[arr.length-1-i];
+            arr[arr.length-1-i] = max;
+            arr[maxindex]=temp;
+        }
+    }
+}
+
+//time compleity
+// - best case - O(n^2)
+// - worst case - O(n^2)
