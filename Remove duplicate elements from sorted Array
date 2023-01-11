@@ -1,0 +1,19 @@
+class Solution {
+    int remove_duplicate(int A[],int N){
+        int index =0;
+        A[index] = A[0];
+        
+        for ( int i =1; i<N; i++){
+            
+            if ( A[index]== A[i]){
+                
+            }
+            else{
+                index++;
+                
+                A[index]=A[i];
+            }
+        }
+        return index+1;
+    }
+}
