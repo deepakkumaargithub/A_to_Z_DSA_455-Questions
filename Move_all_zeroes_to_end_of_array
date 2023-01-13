@@ -1,0 +1,58 @@
+1. approach
+-- using extra space
+
+
+//User function Template for Java
+
+class Solution {
+    void pushZerosToEnd(int[] arr, int n) {
+        // code here
+        
+    int[] copyarr = new int[n];
+    int count = 0;
+     for(int i=0;  i<n; i++){ //  store all  non-zeroes element in coppyarr
+         if( arr[i]!= 0)
+             copyarr[count++] =  arr[i];  
+     }
+     for( int i =0; i<n; i++)
+     arr[i] =  copyarr[i];  // copy into original array from copyarr
+    
+}
+}
+
+TC = O(n)
+Aux space = O(n)
+
+
+
+2.approach
+
+
+
+//User function Template for Java
+
+class Solution {
+    void pushZerosToEnd(int[] arr, int n) {
+        // code here
+        int count = 0;
+        for (int i=0; i<n; i++){ // count no. of non zeroes elements.
+            if ( arr[i] != 0)
+            count++;
+        }
+        
+        int j = 0;
+        
+        for( int i = 0; i<n; i++){ // initialize non-zeroes element from index 0.
+            if ( arr[i] != 0){
+                arr[j++] = arr[i];
+            }
+        }
+        
+        for ( int k = count; k<n; k++){ //append zeroes after end  of non-zeroes(count).
+            arr[k] = 0;
+        }
+    }
+}
+
+TC = O(n)
+Aux space = O(1)
