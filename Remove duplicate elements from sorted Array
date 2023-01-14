@@ -1,19 +1,20 @@
 class Solution {
     int remove_duplicate(int A[],int N){
-        int index =0;
-        A[index] = A[0];
-        
-        for ( int i =1; i<N; i++){
-            
-            if ( A[index]== A[i]){
-                
-            }
-            else{
+        int index =0;  // use for indexing ans array ie (A[]).
+    
+        for ( int i = 1; i<N; i++){ // run n-1  timmes,start from i=1.
+            if ( A[index]!=A[i]){ // false  checking condition,with same value 
+                                        // do nothing just increament i.  
                 index++;
-                
-                A[index]=A[i];
+                A[index] = A[i]; 
             }
         }
-        return index+1;
+        return index+1; // return distinct values.
     }
 }
+
+
+// TC = O(n)
+// Aux Space = O(1)
+
+//approach :- return distinct elements.
